@@ -2,6 +2,8 @@
 
 **Shivam Gupta | Research artifact | September 2026**
 
+[Read the paper (PDF)](paper.pdf) · [Build the manuscript](research/cache-coupling/paper/README.md)
+
 This repository accompanies a controlled analytical and implementation study of stochastic tool-result sharing. It contains proofs, exhaustive finite sums, reproducibility protocols, and a pinned TVCache runtime audit. It does not report language-model training or establish a defect in TVCache's published benchmarks.
 
 The central result is that preserving each rollout's conditional reward distribution does not ensure an equivalent expected group-normalized update. Sharing can change the update direction and its variance. Centering without within-group standard-deviation scaling is an existing control, not a new optimizer.

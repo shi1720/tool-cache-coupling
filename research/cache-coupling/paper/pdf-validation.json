@@ -1,0 +1,16 @@
+{
+  "artifact": "Gupta_Tool_Cache_Coupling.pdf",
+  "sha256": "93622e450669aba3239342dd8ca9854fd1c7c3fa017bf8fc9e0cd867727c2b86",
+  "pages": 9,
+  "author": "Shivam Gupta",
+  "visual_review": "All nine pages inspected; no visible clipping or overlapping text.",
+  "text_checks": [
+    "No out-of-page text",
+    "No unresolved question-mark references",
+    "No em dashes"
+  ],
+  "font_check": "All fonts embedded",
+  "unit_tests_passed": 6,
+  "extension_configurations_checked": 540,
+  "scope": "Controlled analytical and implementation study; no LLM training benchmark; internal automated review only."
+}

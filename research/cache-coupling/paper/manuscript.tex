@@ -1,5 +1,5 @@
 \documentclass[10pt,letterpaper]{article}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.9in]{geometry}
 \usepackage{amsmath,amsthm}
 \usepackage{newtxtext,newtxmath}
 \usepackage{microtype,booktabs,graphicx,enumitem,array}
@@ -8,7 +8,7 @@
 \hypersetup{colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue,
  pdftitle={Marginally Correct Tool Caches Can Reverse Group-Normalized Policy Updates},
  pdfauthor={Shivam Gupta},pdfsubject={Stochastic tool caching and group-relative learning}}
-\setlength{\parskip}{3pt}
+\setlength{\parskip}{2pt}
 \setlength{\parindent}{1em}
 \setlength{\emergencystretch}{2em}
 \setlist{nosep,leftmargin=1.5em}
@@ -32,17 +32,13 @@
 \newcommand{\shr}{\mathrm{share}}
 \newcommand{\ctr}{\mathrm{ctr}}
 \title{\vspace{-1.4em}\LARGE\bfseries Marginally Correct Tool Caches Can Reverse\\ Group-Normalized Policy Updates}
-\author{\large Shivam Gupta\\[3pt]\normalsize Independent Researcher\\
+\author{\large Shivam Gupta\thanks{LLM-based tools assisted with research exploration, code, mathematical analysis, manuscript preparation, and internal review. Internal automated reviews are not external peer review.}\\[3pt]\normalsize Independent Researcher\\
 \normalsize\href{mailto:shivam1720406@gmail.com}{shivam1720406@gmail.com}}
 \date{20 September 2026}
 
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begingroup
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\footnotetext[1]{LLM-based tools assisted with research exploration, code, mathematical analysis, manuscript preparation, and internal review. Internal automated reviews are not external peer review.}
-\endgroup
 \begin{abstract}
 Tool-result caching reduces repeated execution in agent training, but reuse also
 determines which rollouts share environmental randomness. We isolate this
@@ -388,7 +384,7 @@ stabilizer, not all implementation conventions.
 \section{A pinned implementation audit}
 \subsection{Execution boundary}
 To connect the intervention to executable infrastructure, we inspected and
-ran TVCache revision \texttt{3a4f95a6582eea1e4b7e84a9f3a0c74eaa8fde02}
+ran TVCache revision \texttt{3a4f95a6582e}
 \cite{tvcachecode}. The adaptive follow-up protocol was written after source
 inspection and after the numerical study, before executing the runtime probe.
 The probe uses unmodified implementations of the semantic stateful executor,
@@ -484,7 +480,8 @@ Python 3.12 with Flask 3.1.2, HTTPX 0.28.1, and Requests 2.32.5, with all
 transitive versions pinned. Third-party code is retrieved from the pinned Git
 revision, kept unmodified, and excluded from redistribution. No credentials,
 paid API calls, participant data, or model outputs are required to reproduce
-the reported experiments. The artifact location is provided with this manuscript.
+the reported experiments. The public artifact, including source and numerical
+results, is available at \url{https://github.com/shi1720/tool-cache-coupling}.
 
 \paragraph{Broader impact.}
 The intended use is auditing training optimizations before relying on their
@@ -603,6 +600,7 @@ repair does not preserve gradient noise. Any efficiency claim must account for
 the number of independently sampled groups and the physical call budget.
 We do not turn these identities into a wall-clock or convergence claim.
 
+\newpage
 \section{Stabilizer threshold and general reward ties}
 \label{app:epsilon}
 For $\epsilon>0$, $A_\epsilon$ and $B_\epsilon$ are strictly positive at
@@ -623,8 +621,8 @@ needed to compare with expected return; the bounded normalized update itself
 is well-defined for any almost surely finite scalar $Y$.
 
 \section{Artifact map and audit boundaries}
-\begin{table}[h]
-\centering\small
+\begin{center}
+\small
 \begin{tabular}{p{.38\linewidth}p{.55\linewidth}}
 \toprule
 Artifact & Purpose\\
@@ -632,6 +630,7 @@ Artifact & Purpose\\
 \texttt{docs/protocol-001.md} & Fixed grid and controls before numerical execution.\\
 \texttt{src/enumerate\_updates.py} & Count-based finite-sum computation.\\
 \texttt{tests/test\_enumeration.py} & Independent ordered-outcome checks and identities.\\
+\texttt{reviews/check\_extensions.py} & Variance and stabilizer identities checked against frozen results.\\
 \texttt{results/enumeration-001.json} & All 540 configurations, including negative controls.\\
 \texttt{docs/protocol-002.md} & Explicitly adaptive runtime follow-up.\\
 \texttt{src/runtime\_probe.py} & Unmodified vendor stack with in-process transport.\\
@@ -640,7 +639,7 @@ Artifact & Purpose\\
 \texttt{requirements-runtime.lock} & Exact runtime dependency versions.\\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 The runtime audit tests a narrow execution path: sequential one-call rollouts,
 no stored sandbox forks, no eviction, no expiry, and no production network.
 The backend's cleanup threads are stopped after each case. Distinct identities

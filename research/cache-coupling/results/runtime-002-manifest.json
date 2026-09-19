@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "Flask": "3.1.2",
+    "httpx": "0.28.1",
+    "requests": "2.32.5"
+  },
+  "python": "3.12.14",
+  "result_sha256": "292303bc930b17767a04074135907be238a50e9e819f334f978f220648cbea10",
+  "sources": {
+    "docs/protocol-002.md": "46e3f16afb36856d0bfe36a30c4575dae331d049dfd99cde6d852c3ea050bfe0",
+    "requirements-runtime.lock": "41aec13a99b5077f8f75db515fc0b0e70fb3a1cddc84bd76ba8dffaa7325abac",
+    "results/tvcache-sources.json": "2434961b24700eb7952e6848977e24a49aeadf74c05fba9dda6075ef089474ab",
+    "src/prepare_tvcache.py": "27f5d5f9692fd4dbd278e0b3af98e9158bd4a4089cdf73896baa39b491f2cc9e",
+    "work/../src/runtime_probe.py": "927587f6aa778f3e75bcc76e8c91d3cc58d8ca8c9e4c5413205eee590005ab70"
+  }
+}

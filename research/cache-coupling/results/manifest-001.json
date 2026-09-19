@@ -1,0 +1,10 @@
+{
+  "protocol": "001",
+  "python": "3.9.6",
+  "result_sha256": "f930aa4668f59fce09cbcc8b4a12aab532ec5dfadf4c22d09a1a9c741a66b33d",
+  "sources": {
+    "docs/protocol-001.md": "58c8bdf1ac31538d16a7de87439cf23ee85233dfc8070839289821503380dd7e",
+    "src/enumerate_updates.py": "b2cd798b8fba23fc8f960723def402c7103ce5fa93f408c2164df16e78456939",
+    "tests/test_enumeration.py": "ad9ade9653578a8922734bc367c037174e088aaf448a42daf6e870bf33245f58"
+  }
+}

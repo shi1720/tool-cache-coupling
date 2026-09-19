@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript and specify the artifact revision."
+title: "Marginally Correct Tool Caches Can Reverse Group-Normalized Policy Updates"
+authors:
+  - family-names: Gupta
+    given-names: Shivam
+version: 1.0.0
+date-released: 2026-09-20
+repository-code: "https://github.com/shi1720/tool-cache-coupling"
+license: MIT

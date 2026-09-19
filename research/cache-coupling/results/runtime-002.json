@@ -1,0 +1,1349 @@
+{
+  "case_count": 8,
+  "network_attempts": [],
+  "revision": "3a4f95a6582eea1e4b7e84a9f3a0c74eaa8fde02",
+  "rollout_count": 256,
+  "rows": [
+    {
+      "executor_total_calls": 0,
+      "executor_total_executions": 0,
+      "fixture": "deterministic",
+      "in_process_http_request_count": 0,
+      "mode": "direct",
+      "physical_tool_call_count": 32,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8"
+      ],
+      "rollouts": 32
+    },
+    {
+      "executor_total_calls": 32,
+      "executor_total_executions": 2,
+      "fixture": "deterministic",
+      "in_process_http_request_count": 68,
+      "mode": "shared",
+      "physical_tool_call_count": 2,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8"
+      ],
+      "rollouts": 32
+    },
+    {
+      "executor_total_calls": 32,
+      "executor_total_executions": 32,
+      "fixture": "deterministic",
+      "in_process_http_request_count": 128,
+      "mode": "task_namespace",
+      "physical_tool_call_count": 32,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0.8"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8"
+      ],
+      "rollouts": 32
+    },
+    {
+      "executor_total_calls": 32,
+      "executor_total_executions": 32,
+      "fixture": "deterministic",
+      "in_process_http_request_count": 128,
+      "mode": "draw_identity",
+      "physical_tool_call_count": 32,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": 0,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 1,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 2,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 3,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 4,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 5,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 6,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 7,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 8,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 9,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 10,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 11,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 12,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 13,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 14,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 15,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 16,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 17,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 18,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 19,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 20,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 21,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 22,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 23,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 24,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 25,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 26,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 27,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 28,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 29,
+          "value": "0.8"
+        },
+        {
+          "action": "A",
+          "draw_id": 30,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 31,
+          "value": "0.8"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8",
+        "0.9",
+        "0.8"
+      ],
+      "rollouts": 32
+    },
+    {
+      "executor_total_calls": 0,
+      "executor_total_executions": 0,
+      "fixture": "alternating",
+      "in_process_http_request_count": 0,
+      "mode": "direct",
+      "physical_tool_call_count": 32,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0"
+      ],
+      "rollouts": 32
+    },
+    {
+      "executor_total_calls": 32,
+      "executor_total_executions": 2,
+      "fixture": "alternating",
+      "in_process_http_request_count": 68,
+      "mode": "shared",
+      "physical_tool_call_count": 2,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1",
+        "0.9",
+        "1"
+      ],
+      "rollouts": 32
+    },
+    {
+      "executor_total_calls": 32,
+      "executor_total_executions": 32,
+      "fixture": "alternating",
+      "in_process_http_request_count": 128,
+      "mode": "task_namespace",
+      "physical_tool_call_count": 32,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": null,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": null,
+          "value": "0"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0"
+      ],
+      "rollouts": 32
+    },
+    {
+      "executor_total_calls": 32,
+      "executor_total_executions": 32,
+      "fixture": "alternating",
+      "in_process_http_request_count": 128,
+      "mode": "draw_identity",
+      "physical_tool_call_count": 32,
+      "physical_tool_calls": [
+        {
+          "action": "A",
+          "draw_id": 0,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 1,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 2,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 3,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": 4,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 5,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 6,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 7,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": 8,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 9,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 10,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 11,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": 12,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 13,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 14,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 15,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": 16,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 17,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 18,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 19,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": 20,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 21,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 22,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 23,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": 24,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 25,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 26,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 27,
+          "value": "0"
+        },
+        {
+          "action": "A",
+          "draw_id": 28,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 29,
+          "value": "1"
+        },
+        {
+          "action": "A",
+          "draw_id": 30,
+          "value": "0.9"
+        },
+        {
+          "action": "B",
+          "draw_id": 31,
+          "value": "0"
+        }
+      ],
+      "returned_values": [
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0",
+        "0.9",
+        "1",
+        "0.9",
+        "0"
+      ],
+      "rollouts": 32
+    }
+  ],
+  "scope": "Unmodified executor, async client, Flask routes and backend; scripted tool; in-process HTTP"
+}

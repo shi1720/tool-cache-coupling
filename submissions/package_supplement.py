@@ -57,6 +57,8 @@ See `research/cache-coupling/README.md` for the pinned runtime dependencies and 
 
 The preparation script's author-specific default local clone path was replaced by a relative default (`work/TVCache`). Its corresponding source hash in the runtime manifest was updated to match the packaged file. No experiment logic or numerical/runtime result bytes were changed. Passing an explicit clone path is the documented preparation command. Original third-party TVCache source is retrieved at the pinned revision and is not redistributed here. Internal AI reviews and identifying manuscript files are excluded.
 
+Original artifact code and documentation are MIT licensed. The retrieved TVCache package (`tvcache/LICENSE` at the pinned revision) is Apache-2.0 licensed. Third-party source and dependencies are not redistributed in this supplement.
+
 Generative AI tools assisted research development, code, analysis, writing, and internal review. Automated checks are not external peer review. See the manuscript's AI use statement.
 ''')
  for p in stage.rglob('*'):

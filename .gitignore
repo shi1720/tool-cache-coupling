@@ -10,6 +10,7 @@ work/
 /output/
 /submissions/arxiv/
 /submissions/tmlr/
+/submissions/aistats/
 /submissions/templates/
 /submissions/*.zip
 /submissions/private/

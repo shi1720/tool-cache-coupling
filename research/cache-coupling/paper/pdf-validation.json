@@ -18,6 +18,17 @@
       "text_and_metadata_checks": "Passed",
       "template": "Official unmodified TMLR template and bibliography style",
       "submission_status": "Prepared, not submitted"
+    },
+    "aistats2027": {
+      "file": "Tool_Cache_Coupling_AISTATS_2027_Anonymous.pdf",
+      "sha256": "8248a4a59890fe1e265abd834d49be0da9d1d1d292f4984482c12925b706d764",
+      "pages": 10,
+      "main_text_pages": 6,
+      "visual_review": "All pages inspected; final changed checklist page re-inspected; other nine page renders byte-identical",
+      "text_and_metadata_checks": "Passed; all fonts embedded; no identity-bearing links, out-of-page words, em dashes, or unresolved references",
+      "template": "Official unmodified AISTATS 2027 style",
+      "template_warning": "5.1225pt hbox warning at title block; rendered content within bounds, no visible clipping",
+      "submission_status": "Prepared, not submitted"
     }
   },
   "unit_tests_passed": 10,

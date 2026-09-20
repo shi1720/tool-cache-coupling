@@ -23,3 +23,20 @@ The TMLR output uses the official unmodified style and bibliography style, with 
 The anonymous code package removes an author-specific default local path and updates only that file's matching source hash in the packaged runtime manifest. It does not change result bytes or numerical/runtime experiment logic. Its README records this transformation.
 
 Author-side declarations, account verification, affiliation/conflicts, licensing, venue exclusivity, and any endorsement requirements must be completed accurately through the relevant portal. Generating the package is not equivalent to satisfying those requirements.
+
+## AISTATS 2027 candidate
+
+After the preceding preparation commands, run:
+
+```sh
+curl -fL https://aistats.org/aistats2027/AISTATS2027PaperPack.zip -o submissions/templates/AISTATS2027PaperPack.zip
+unzip -q submissions/templates/AISTATS2027PaperPack.zip -d submissions/templates
+mkdir -p tmp/pdfs/aistats
+python3 submissions/prepare_aistats.py
+tectonic submissions/aistats/manuscript.tex --outdir tmp/pdfs/aistats
+cp submissions/tmlr-code.zip submissions/aistats-code.zip
+```
+
+The official archive retrieved on 20 September 2026 has SHA-256 `aac31ecf2e41f5a2b7f21d00094bfc2fc1207c34d9f955e991b66f3dc98fdb9b`. The style files are unmodified. The candidate PDF has six pages containing main text, one references page, one checklist page, and two single-column appendix pages. It includes the mandatory substantive AI Use Statement and all 18 official checklist questions without rewriting them. Numerical citations are permitted for initial submissions; an accepted version must use author-year citations.
+
+This is a backup candidate package, not a concurrent submission. The template prints an automatic review header even before upload. Neither that header nor generation of these files establishes submission or acceptance. Account activation, the author's declarations and review, venue selection, and a justified reciprocal-reviewer exemption if applicable remain pending. The author should confirm the conference's in-person presentation commitment before submission.

@@ -13,4 +13,6 @@ tectonic research/cache-coupling/paper/manuscript.tex --outdir output/pdf
 
 The source includes the committed vector figure at `../results/shared-outcome-updates.pdf`. Fonts are embedded. Tectonic may download its TeX support files on its first run. It produces `output/pdf/manuscript.pdf`.
 
-The distributed PDF was visually inspected on all nine pages, checked for out-of-page text and unresolved references, and verified to contain embedded fonts and correct author metadata. The numerical and variance checks pass. These checks do not establish novelty, external peer review, or acceptance at a particular venue.
+The distributed PDF was visually inspected on all eight pages, checked for out-of-page text and unresolved references, and verified to contain embedded fonts and correct author metadata. The numerical and variance checks pass. These checks do not establish novelty, external peer review, or acceptance at a particular venue.
+
+Venue-specific source and supplement preparation are documented in `submissions/README.md`. The anonymous TMLR package is a prepared review copy, not evidence of submission.

@@ -1,16 +1,27 @@
 {
-  "artifact": "Gupta_Tool_Cache_Coupling.pdf",
-  "sha256": "93622e450669aba3239342dd8ca9854fd1c7c3fa017bf8fc9e0cd867727c2b86",
-  "pages": 9,
-  "author": "Shivam Gupta",
-  "visual_review": "All nine pages inspected; no visible clipping or overlapping text.",
-  "text_checks": [
-    "No out-of-page text",
-    "No unresolved question-mark references",
-    "No em dashes"
-  ],
-  "font_check": "All fonts embedded",
-  "unit_tests_passed": 6,
+  "date": "2026-09-20",
+  "artifacts": {
+    "arxiv": {
+      "file": "Gupta_Tool_Cache_Coupling.pdf",
+      "sha256": "72e27cf242a2e8e6c476f30acda60c4dfc9db80b12644fa73f83cdeb4c4eac3c",
+      "pages": 8,
+      "visual_review": "All pages inspected",
+      "text_and_metadata_checks": "Passed",
+      "template": "General bylined preprint",
+      "submission_status": "Prepared, not submitted"
+    },
+    "tmlr": {
+      "file": "Tool_Cache_Coupling_TMLR_Anonymous.pdf",
+      "sha256": "243a8cfbaa39b5dc3c72d99c545bdb353ed9f16043188fce6a9c3d7f3d1d18be",
+      "pages": 9,
+      "visual_review": "All pages inspected",
+      "text_and_metadata_checks": "Passed",
+      "template": "Official unmodified TMLR template and bibliography style",
+      "submission_status": "Prepared, not submitted"
+    }
+  },
+  "unit_tests_passed": 10,
   "extension_configurations_checked": 540,
-  "scope": "Controlled analytical and implementation study; no LLM training benchmark; internal automated review only."
+  "frozen_result_comparison": "Numerical and runtime results reproduce byte-identically",
+  "review_type": "Internal AI-assisted checks, not external peer review"
 }

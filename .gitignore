@@ -4,3 +4,12 @@ work/
 *.log
 *.aux
 *.synctex.gz
+
+# Local compilation and unpublished submission packages
+/tmp/
+/output/
+/submissions/arxiv/
+/submissions/tmlr/
+/submissions/templates/
+/submissions/*.zip
+/submissions/private/

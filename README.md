@@ -12,11 +12,17 @@ The central result is that preserving each rollout's conditional reward distribu
 
 ```sh
 python3 -m unittest discover -s research/cache-coupling/tests -v
-python3 research/cache-coupling/src/enumerate_updates.py
+python3 research/cache-coupling/src/reproduce.py numerical
 python3 research/cache-coupling/reviews/check_extensions.py
 ```
 
-The numerical computation uses the Python standard library. [Full instructions](research/cache-coupling/README.md) include the pinned runtime probe and plotting dependencies. Runtime sources are retrieved at a fixed Git revision, never from an unpinned working tree.
+The numerical computation uses the Python standard library. The supported reproduction command verifies source hashes, executes in a disposable canonical copy, and requires byte-identical results while preserving historical results and manifests. [Full instructions](research/cache-coupling/README.md) include pinned runtime setup. After that setup, run:
+
+```sh
+research/cache-coupling/work/.venv/bin/python research/cache-coupling/src/reproduce.py runtime
+```
+
+The wrapper uses the invoking interpreter and checks every locked runtime package version. Runtime sources are retrieved at a fixed Git revision, never from an unpinned working tree; their hashes are checked before linking them into the disposable copy.
 
 ## Contents
 

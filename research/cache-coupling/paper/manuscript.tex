@@ -40,24 +40,23 @@
 \maketitle
 \thispagestyle{empty}
 \begin{abstract}
-Tool-result caching reduces repeated execution in agent training, but reuse also
-determines which rollouts share environmental randomness. We isolate this
-statistical choice in a two-action model where independent and shared execution
-preserve every rollout's conditional reward distribution. Despite this marginal
-agreement, sharing one stochastic result per group can reverse the expected
-group-normalized policy update. We derive an exact finite-group expression:
-against a constant alternative, the shared update depends on the probability
-of winning minus the probability of losing, rather than on the difference in
-expected reward. A Bernoulli specialization gives a wrong-direction region that
-persists as the group size grows, together with a non-vanishing update-variance
-floor. Mean centering without group standard-deviation scaling preserves the
-expected-return direction in this model, an existing remedy rather than a new
-optimizer. Exhaustive finite sums cover 540 configurations and 3,240 estimator
-evaluations, with a separately implemented ordered-sequence checker. A separate
-audit uses 256 scripted rollouts to reproduce the relevant sharing path in a
-pinned, unmodified TVCache stack. This is a controlled analytical and implementation study, not an LLM
-training benchmark. It establishes that marginal output validity alone is
-insufficient to certify a stochastic cache as training-equivalent.
+Tool-result caching reduces repeated execution in agent training, but also
+couples rollout randomness. We study a two-action model in which independent
+and shared execution preserve every rollout's conditional reward distribution.
+Despite this marginal agreement, sharing one stochastic result per group can
+reverse the expected group-normalized policy update. We derive an exact
+finite-group expression: against a constant alternative, the shared update
+follows the probability of winning minus the probability of losing, rather
+than the difference in expected reward. A Bernoulli specialization yields a
+wrong-direction region and a non-vanishing update-variance floor as group size
+grows. Centering without group standard-deviation scaling preserves the
+expected-return direction in this model, using an existing estimator control.
+Exhaustive finite sums verify 540 configurations and 3,240 estimator evaluations,
+with a separate ordered-sequence checker. An implementation audit reproduces
+the sharing path in a pinned, unmodified TVCache stack using 256 scripted
+rollouts. These results do not measure language-model training performance or
+refute TVCache's deterministic-output contract. They establish that marginal
+output validity alone cannot certify a stochastic cache as training-equivalent.
 \end{abstract}
 
 \section{Introduction}
@@ -88,11 +87,10 @@ magnitude of the realized payoff gap, leaving only its sign. For Bernoulli
 payoffs, the resulting preference threshold is $1/2$, even when the alternative
 has a substantially higher expected payoff.
 
-Normalization bias is established prior work \cite{drgrpo,che}. We do not
-introduce it as a new phenomenon, and do not propose removing the standard
-deviation as a new algorithm. Our contribution is a precisely controlled
-execution intervention, its exact statistical consequences, and an auditable
-implementation path. Specifically, we provide:
+Group-normalization bias and centering-based alternatives are established
+\cite{drgrpo,che}. We study how a controlled change in tool execution induces
+that bias, with exact statistical consequences and an auditable implementation
+path. Our contributions are:
 \begin{enumerate}
 \item A finite-group characterization of shared-outcome updates for an arbitrary
 scalar reward distribution, with a Bernoulli sign-reversal example.
@@ -104,7 +102,7 @@ mathematical claims, scripted execution evidence, and untested deployment
 implications separate.
 \end{enumerate}
 
-The commercial motivation is practical: a lower physical tool-call count is
+The engineering motivation is practical: a lower physical tool-call count is
 not, by itself, evidence of equivalent training. The results identify a
 condition to test when optimizing expensive stochastic tools. They do not
 measure production prevalence, model accuracy loss, or monetary savings.
@@ -121,7 +119,7 @@ clipped, multi-epoch, token-weighted training algorithm.
 \paragraph{Reward magnitude and stochastic feedback.}
 Che et al. show that in a sparse-answer regime, group normalization can erase
 the magnitude of an error penalty and change a decision threshold \cite{che}.
-Our independent-execution model is affinely equivalent to their three-reward
+Our Bernoulli independent-execution model is affinely equivalent to their three-reward
 setting. Sharing makes the relevant two-level reward structure arise at every
 interior action probability, rather than only in a sparse-action regime. This
 close relationship limits any claim of conceptual novelty. El Mansouri et al.
@@ -330,7 +328,7 @@ A separately implemented checker enumerates ordered rollout outcomes and
 evaluates the literal score expression, rather than the count reduction. It
 checks 288 small-group combinations. Other controls verify probability mass,
 the reward mean, the centered identity, the shared formula, deterministic
-$q\in\{0,1\}$ equivalence, and $G=2$ equivalence. All six test methods pass.
+$q\in\{0,1\}$ equivalence, and $G=2$ equivalence. All six numerical test methods pass.
 Maximum probability-mass error is below $3.34\times10^{-15}$; maximum marginal-mean
 error is below $1.78\times10^{-15}$. Numerical precision checks are not statistical
 confidence intervals.
@@ -340,7 +338,7 @@ The protocol selected $p=0.5,c=0.9,q=0.8$ analytically before execution.
 Both laws have mean reward $0.85$ and true gradient $-0.025$. At $G=64$,
 independent normalization gives $-0.078867$, while sharing gives $+0.297628$.
 The centered estimator gives $-0.024609$ under either law
-(Table~\ref{tab:witness}). Thus the intervention reverses the expected update
+(Table~\ref{tab:witness} and Figure~\ref{fig:updates}). Thus the intervention reverses the expected update
 while leaving the conditional reward marginals unchanged.
 
 \begin{table}[ht]
@@ -600,7 +598,6 @@ repair does not preserve gradient noise. Any efficiency claim must account for
 the number of independently sampled groups and the physical call budget.
 We do not turn these identities into a wall-clock or convergence claim.
 
-\newpage
 \section{Stabilizer threshold and general reward ties}
 \label{app:epsilon}
 For $\epsilon>0$, $A_\epsilon$ and $B_\epsilon$ are strictly positive at
@@ -620,26 +617,7 @@ $S_G(p)^2[\Pr(Y>c)-\Pr(Y<c)]^2$ from this expression. Finite first moment is
 needed to compare with expected return; the bounded normalized update itself
 is well-defined for any almost surely finite scalar $Y$.
 
-\section{Artifact map and audit boundaries}
-\begin{center}
-\small
-\begin{tabular}{p{.38\linewidth}p{.55\linewidth}}
-\toprule
-Artifact & Purpose\\
-\midrule
-\texttt{docs/protocol-001.md} & Fixed grid and controls before numerical execution.\\
-\texttt{src/enumerate\_updates.py} & Count-based finite-sum computation.\\
-\texttt{tests/test\_enumeration.py} & Independent ordered-outcome checks and identities.\\
-\texttt{reviews/check\_extensions.py} & Variance and stabilizer identities checked against frozen results.\\
-\texttt{results/enumeration-001.json} & All 540 configurations, including negative controls.\\
-\texttt{docs/protocol-002.md} & Explicitly adaptive runtime follow-up.\\
-\texttt{src/runtime\_probe.py} & Unmodified vendor stack with in-process transport.\\
-\texttt{results/runtime-002.json} & Full returned sequences and execution counters.\\
-\texttt{results/*manifest*.json} & Source and result digests for reproducibility.\\
-\texttt{requirements-runtime.lock} & Exact runtime dependency versions.\\
-\bottomrule
-\end{tabular}
-\end{center}
+\section{Runtime audit boundaries}
 The runtime audit tests a narrow execution path: sequential one-call rollouts,
 no stored sandbox forks, no eviction, no expiry, and no production network.
 The backend's cleanup threads are stopped after each case. Distinct identities

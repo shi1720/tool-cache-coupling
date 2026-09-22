@@ -7,17 +7,20 @@ concurrency:
   cancel-in-progress: true
 jobs:
   numerical:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
-        python: ['3.9', '3.12']
+        include:
+          - { os: ubuntu-latest, python: '3.9', comparison: '--portable' }
+          - { os: ubuntu-latest, python: '3.12', comparison: '--portable' }
+          - { os: macos-latest, python: '3.12', comparison: '' }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
       - run: python -m unittest discover -s research/cache-coupling/tests -v
-      - run: python research/cache-coupling/src/reproduce.py numerical
+      - run: python research/cache-coupling/src/reproduce.py numerical ${{ matrix.comparison }}
       - run: python research/cache-coupling/reviews/check_extensions.py

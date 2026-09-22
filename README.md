@@ -16,7 +16,9 @@ python3 research/cache-coupling/src/reproduce.py numerical
 python3 research/cache-coupling/reviews/check_extensions.py
 ```
 
-The numerical computation uses the Python standard library. The supported reproduction command verifies source hashes, executes in a disposable canonical copy, and requires byte-identical results while preserving historical results and manifests. [Full instructions](research/cache-coupling/README.md) include pinned runtime setup. After that setup, run:
+The numerical computation uses the Python standard library. The reproduction command verifies source hashes, executes in a disposable canonical copy, and requires byte-identical results while preserving historical results and manifests. Exact numerical reproduction is checked on macOS. Linux's math library can produce different final floating-point bits; use `python3 research/cache-coupling/src/reproduce.py numerical --portable` there. This opt-in comparison keeps JSON types, keys, list ordering, counts and the experiment's ±1e-12 sign classification exact, while comparing finite floats at relative tolerance 1e-13 and absolute tolerance 1e-14. It reports the number of rounded values and maximum absolute difference. The default remains byte-exact, and the runtime audit never uses portable comparison.
+
+[Full instructions](research/cache-coupling/README.md) include pinned runtime setup. After that setup, run:
 
 ```sh
 research/cache-coupling/work/.venv/bin/python research/cache-coupling/src/reproduce.py runtime
